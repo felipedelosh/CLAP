@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CLAP</title>
+ {% load bootstrap5 %}
+ {% bootstrap_css %}
+ {% bootstrap_javascript %}
+ <link rel="stylesheet" href="{% static 'css/clap.css' %}">
+</head>
+<body>
+<div class="container">
+ <p class="text-center text-white bg-dark">HISTORIA CLINICA MATERNO-PERINATAL - CLAP - OPS/OMS</p>
+ <form method="POST">
+  <div class="col-12">
+    <div class="form-group">
+        <label for="full_name">NOMBRE:</label>
+        <input type="text" class="form-control" id="txt_full_name" aria-describedby="ingrese el nombre del paciente" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+        <label for="address">DIRECCIÓN:</label>
+        <input type="text" class="form-control" id="txt_address" aria-describedby="ingrese la dirección del paciente" placeholder="Dirección">
+    </div>
+    <div class="form-group">
+        <label for="neighborhood">LOCALIDAD:</label>
+        <input type="text" class="form-control" id="txt_neighborhood" aria-describedby="ingrese la localidad del paciente" placeholder="Localidad">
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="phone">TELÉFONO:</label>
+                    <input type="text" class="form-control" id="txt_phone" aria-describedby="digite el número de movíl del paciente" placeholder="teléfono">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                 <label for="date">Fecha de nacimiento:</label>
+                 <input type="date" class="form-control" id="txt_birth_date">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="age">Edad (Años):</label>
+                            <input type="text" class="form-control" id="txt_age" aria-describedby="ingrese el número de años del paciente">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row ageAlertArea">
+                            <div class="col-3"><input type="checkbox" id="checkbox-1" class="custom-checkbox" /></div>
+                            <div class="col-9"><p>< de 15 <br>> de 40</de></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group">
+                    <label for="ethnicity">ETNIA:</label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="checkBoxEtniaBlanca" value="optionCheckBoxEtniaBlanca">
+                      <label class="form-check-label" for="inlineCheckbox1">blanca</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="checkBoxEtniaIndigena" value="optionCheckBoxEtniaIndigena">
+                      <label class="form-check-label" for="inlineCheckbox2">indigena</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="checkBoxEtniaIndigenaMestiza" value="optionCheckBoxEtniaIndigenaMestiza">
+                      <label class="form-check-label" for="inlineCheckbox3">mestiza</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="checkBoxEtniaIndigenaNegra" value="optionCheckBoxEtniaIndigenaNegra">
+                      <label class="form-check-label" for="inlineCheckbox4">negra</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="checkBoxEtniaIndigenaOtra" value="optionCheckBoxEtniaIndigenaOtra">
+                      <label class="form-check-label" for="inlineCheckbox5">otra</label>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="writeAndRead">LEE Y ESCRIBE:</label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="wirteAndReadYes" value="optionWirteAndReadYes">
+                        <label class="form-check-label" for="wirteAndReadYes">si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" id="wirteAndReadNot" class="mini-checkBoxWarning" value="optionWirteAndReadNot" />
+                        <label class="form-check-label" for="wirteAndReadNot">no</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="col-12">
+        <label for="study">Estudios:</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input type="checkbox" id="studyNot" class="mini-checkBoxWarning" value="optionStudyNot" />
+            <label class="form-check-label" for="studyNot">ninguno</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="studyElemtarySchool" value="optionStudyElemtarySchool">
+            <label class="form-check-label" for="studyElemtarySchool">primaria</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="studySchool" value="optionStudySchool">
+            <label class="form-check-label" for="studySchool">secundaria</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="studyHighSchool" value="optionStudyHighSchool">
+            <label class="form-check-label" for="studySchool">universidad</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label for="yearsInHighLevel">Años en el mayor nivel:</label>
+            <input type="text" name="txtYearsOfHighLevel" id="yearsOfHighLevel" value="" size="2">
+        </div>
+    </div>
+    <br>
+    <div class="col-12">
+        <label for="civilStatus">Estado civil:</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="civilStatusMarried" value="optionCivilStatusMarried">
+            <label class="form-check-label" for="civilStatusMarried">casada</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="civilStatusFreeUnion" value="optionCivilStatusFreeUnion">
+            <label class="form-check-label" for="civilStatusFreeUnion">union libre</label>
+        </div>
+    </div>
+    <div class="col-12">
+
+    </div>
+    <div class="col-12">
+
+    </div>
+  </div>
+ <br>
+ <div class="text-center">
+    <button type="submit">Guardar</button>
+ </div>
+ <br>
+ </form>
+
+ <div class="footer">
+    <p class="text-center text-white bg-dark">2023 - FelipedelosH</p>
+ </div>
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>

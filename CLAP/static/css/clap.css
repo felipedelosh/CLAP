@@ -1,0 +1,32 @@
+body{
+    background-color: beige;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.custom-checkbox:checked {
+    background:linear-gradient(315deg, yellow 45%, black 45%, black 55%, yellow 55%, yellow 100%);
+}
+
+
+.mini-checkBoxWarning{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.mini-checkBoxWarning:checked {
+    background:linear-gradient(315deg, yellow 45%, black 45%, black 55%, yellow 55%, yellow 100%);
+}
+
+.ageAlertArea{
+    margin-top: 10%;
+}
