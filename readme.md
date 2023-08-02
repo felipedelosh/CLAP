@@ -1,8 +1,12 @@
-FelipedelosH
-# Windows 10
-Example Django
+#FelipedelosH
 
-How to run:
+![BANNER](Docs/gitHubBannerPyDjango.png)
+
+This is a CLAP template.
+
+
+
+##How to run:
 
 Activate virtual ENV
 
